@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/rust-playground
+    docker:
+      - image: ekidd/rust-musl-builder:1.39.0-openssl11
+    steps:
+      - checkout
+      - run: rustc HelloWorld.rs
+      - run: rustc HelloWorld2.rs
+      - run: rustc HelloWorld3.rs
+      - run: ./HelloWorld
+      - run: ./HelloWorld2
+      - run: ./HelloWorld3
