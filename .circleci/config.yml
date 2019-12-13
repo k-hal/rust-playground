@@ -12,3 +12,8 @@ jobs:
       - run: ./HelloWorld
       - run: ./HelloWorld2
       - run: ./HelloWorld3
+      - run: |
+          cd hello
+          cargo run
+          cargo build --release
+          cargo run --release
