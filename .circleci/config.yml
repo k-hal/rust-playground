@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/rust-playground
     docker:
-      - image: ekidd/rust-musl-builder:1.42.0-openssl11
+      - image: rust:1.63.0
     steps:
       - checkout
       - run: rustc HelloWorld.rs
