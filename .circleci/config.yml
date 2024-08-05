@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/rust-playground
     docker:
-      - image: rust:1.79.0
+      - image: rust:1.80.0
     steps:
       - checkout
       - run: rustc HelloWorld.rs
